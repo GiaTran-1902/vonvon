@@ -1,0 +1,147 @@
+/* Pretendard */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Thin.woff2') format('woff2');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../../public/fonts/Pretendard-Black.woff2') format('woff2');
+  font-weight: 900;
+}
+
+/* GmarketSans */
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('../../public/fonts/GmarketSansLight.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('../../public/fonts/GmarketSansMedium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('../../public/fonts/GmarketSansBold.woff') format('woff');
+  font-weight: 700;
+}
+
+/* GongGothic */
+@font-face {
+  font-family: 'GongGothic';
+  src: url('../../public/fonts/GongGothicLight.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('../../public/fonts/GongGothicMedium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('../../public/fonts/GongGothicBold.woff') format('woff');
+  font-weight: 700;
+}
+
+/* LeeSeoyun */
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('../../public/fonts/LeeSeoyun.woff') format('woff');
+}
+
+/* NanumBarunGothic */
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('../../public/fonts/NanumBarunGothicWebLight.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('../../public/fonts/NanumBarunGothicWeb.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('../../public/fonts/NanumBarunGothicWebBold.eot') format('woff');
+  font-weight: 700;
+}
+
+/* NeoDunggeunmo */
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url('../../public/fonts/NeoDunggeunmo.woff') format('woff');
+}
+
+/* SUIT */
+@font-face {
+  font-family: 'SUIT';
+  src: url('../../public/fonts/SUIT-Thin.woff2') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('../../public/fonts/SUIT-Medium.woff2') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('../../public/fonts/SUIT-Bold.woff2') format('woff');
+  font-weight: 700;
+}
+
+/* SuncheonR */
+@font-face {
+  font-family: 'SuncheonR';
+  src: url('../../public/fonts/SuncheonR.woff') format('woff');
+}

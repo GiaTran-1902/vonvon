@@ -1,0 +1,95 @@
+.Affiliate {
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+
+.Affliliate-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.Affiliate-form {
+  padding: 0 20px;
+}
+
+.Affiliate-form-email {
+  margin-bottom: 56px;
+}
+
+.Affiliate-form-label {
+  margin-bottom: 12px;
+  color: $greyscale01;
+}
+
+.Affiliate-form-content {
+  margin-bottom: 56px;
+}
+
+.Affiliate-form-input {
+  padding: 9px 0;
+  border-bottom: 1px solid $greyscale05;
+  font-size: 16px;
+  line-height: 22px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.Affiliate-form-textarea {
+  padding: 16px;
+  border: 1px solid $greyscale06;
+  border-radius: 4px;
+  height: 192px;
+  width: 100%;
+}
+
+.Affiliate-form-desc {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.Affiliate-count {
+  font-family: 'Spoqa Han Sans Neo';
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.016em;
+  font-weight: 400;
+  color: $greyscale04;
+  text-align: right;
+}
+
+.Affiliate-content {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.Affiliate-placeholder {
+  font-weight: 400;
+  position: absolute;
+  font-size: 16px;
+  line-height: 22px;
+  top: 16px;
+  left: 16px;
+  pointer-events: none;
+  color: $greyscale04;
+  letter-spacing: -0.06em;
+}
+
+.Affiliate-error {
+  color: $primary;
+  font-size: 12px;
+}
+
+.banner-desc {
+  max-width: 166px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $greyscale03;
+  letter-spacing: -0.012em;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+}

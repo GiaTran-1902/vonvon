@@ -1,0 +1,78 @@
+@import './variables';
+@import './functions';
+
+// Breakpoints
+@mixin media-sm-min {
+  @media (min-width: #{em($screen-sm)}) {
+    @content;
+  }
+}
+
+@mixin media-md-min {
+  @media (min-width: #{em($screen-md)}) {
+    @content;
+  }
+}
+
+@mixin media-lg-min {
+  @media (min-width: #{em($screen-lg)}) {
+    @content;
+  }
+}
+
+@mixin media-xl-min {
+  @media (min-width: #{em($screen-xl)}) {
+    @content;
+  }
+}
+
+@mixin media-xxl-min {
+  @media (min-width: #{em($screen-xxl)}) {
+    @content;
+  }
+}
+
+@mixin media-custom-min($size) {
+  @media (min-width: em($size)) {
+    @content;
+  }
+}
+
+@mixin media-custom-max($size) {
+  @media (max-width: em($size)) {
+    @content;
+  }
+}
+
+@mixin mobile-screen {
+  max-width: 500px;
+  margin: 0 auto;
+  // padding: 0 20px;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin scrolling {
+  display: flex;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@mixin animationDelay($n, $step) {
+  @for $i from 2 through $n {
+    &:nth-child(#{$i}) {
+      animation-delay: (($i - 1) * $step) + s;
+    }
+  }
+}

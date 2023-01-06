@@ -1,0 +1,34 @@
+.secondary-header {
+  //postioning
+  background-color: $white;
+
+  //box-element
+  display: flex;
+  align-items: center;
+  height: 56px;
+
+  .secondary-header-back {
+    display: inline-block;
+  }
+
+  .secondary-header-title {
+    //positioning
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    //box
+    max-width: calc(100% - 88px); //calc(100% - 24px*2 - 20*2) 
+    overflow: hidden;
+
+    color: $greyscale01;
+  }
+
+  .secondary-header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}

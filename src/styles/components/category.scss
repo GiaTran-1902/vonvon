@@ -1,0 +1,44 @@
+.category {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 12px 0 0 20px;
+  border-top: 1px solid #eaedf0;
+  border-bottom: 1px solid #eaedf0;
+
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.category-item {
+  cursor: pointer;
+  margin-right: 20px;
+}
+.category-item-title {
+  margin-bottom: 15px;
+  color: $greyscale04;
+
+  &.active {
+    color: $greyscale01;
+  }
+}
+.category-underline {
+  background: $greyscale01;
+  height: 3px;
+}
+.quizzes-list-bycategory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 27px;
+}
+.carditem-bycategory {
+  margin-bottom: 27px;
+  .carditem-image {
+    height: 242px;
+  }
+}

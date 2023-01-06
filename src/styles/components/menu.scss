@@ -1,0 +1,36 @@
+.menu {
+  display: flex;
+  height: 48px;
+  font-family: 'Pretendard';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid #eaedf0;
+}
+.menu-item {
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: center;
+
+  a {
+    position: relative;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 10px 11px;
+  }
+}
+.text-pink {
+  color: $primary;
+}
+.menu-item-line {
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $primary;
+  }
+}

@@ -1,0 +1,67 @@
+.mbtisettings {
+  //box-elements
+  padding: 40px 0;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.mbtisettings-title {
+  margin-bottom: 24px;
+
+  /* typography */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+.mbtisettings-content {
+  margin-bottom: 100px;
+}
+
+.mbtisettings-content-bongsin {
+  @include space-between;
+
+  margin-top: 80px;
+}
+
+.mbtisettings-bongsin-talk {
+  /* Positioning */
+  position: relative;
+
+  /* Typography */
+  color: $white;
+  font-size: 14px;
+  line-height: 20px;
+
+  /* Visual */
+  background: $greyscale03;
+  border-radius: 20px 20px 0px 20px;
+
+  /* Box-model */
+  padding: 12px;
+  height: fit-content;
+  
+
+  &::after {
+    /* Positioning */
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(100%, 0%);
+
+    /* Visual */
+    background: url(/assets/images/settings/vector.svg) no-repeat center;
+    
+    /* Box-model */
+    height: 12px;
+    width: 12px;
+  }
+
+}
+
+.mbtisettings-bongsin-image {
+  max-width: 150px;
+  margin-left: 24px;
+}

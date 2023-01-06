@@ -1,0 +1,29 @@
+@import './variables';
+@import './functions';
+@import './mixins';
+@import './typography';
+
+//components
+@import './components/layout.scss';
+@import './components/headers/primaryHeader';
+@import './components/headers/secondaryHeader.scss';
+@import 'components/footer';
+@import './components/radioinput';
+@import './components/button';
+@import 'components/modal';
+@import 'components/backdrop';
+@import './components/menu';
+@import 'components/sider';
+@import './components/banner';
+@import './components/category';
+@import './components/CardItem';
+@import './components/BestContent';
+@import './components/HomeCategory';
+//pages
+@import 'pages/mbtisettings.scss';
+@import 'pages/user';
+@import './pages/BusinessAffiliate';
+@import './pages/Success';
+@import './pages/SendOpinion';
+@import './pages/PrivacyPolicy';
+@import './pages/VonVon';

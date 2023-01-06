@@ -1,0 +1,27 @@
+.homecategory-container {
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.homecategory-container:last-of-type {
+  margin-bottom: 80px;
+}
+
+.homecategory-title {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: $greyscale01;
+  margin-bottom: 16px;
+}
+
+.homecategory-carousel {
+  @include scrolling;
+
+  .carditem-defaultcard:nth-child(n + 2) {
+    margin-left: 10px;
+  }
+}

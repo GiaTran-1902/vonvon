@@ -1,0 +1,103 @@
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  top: 0;
+}
+
+.sider {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: $greyscale01;
+  height: -webkit-fill-available;
+  width: 100%;
+  max-width: 255px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+}
+
+.sider-line {
+  background-color: $greyscale07;
+  height: 8px;
+  width: 100%;
+}
+
+.sider-user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.sider-user-ava {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 9px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sider-user-info {
+    font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sider-content {
+    padding: 32px 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sider-text {
+    margin-left: 12px;
+}
+
+.sider-ques-icon {
+    margin-left: auto;
+}
+
+.sider-link-external {
+    display: flex;
+  align-items: center;
+}
+
+.sider-footer {
+    padding: 24px 0 60px;
+  margin: auto 20px 0;
+  border-top: 1px solid $greyscale06;
+  color: $greyscale02;
+}
+
+.sider-link {
+     display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sider-mbti {
+  display: flex;
+  align-items: center;
+  color: $greyscale03;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.sider-mbti-badge {
+  background-color: $secondary;
+  color: #fff;
+  border-radius: 100px;
+  padding: 0 6px;
+  margin-right: 4px;
+  font-size: 8px;
+}

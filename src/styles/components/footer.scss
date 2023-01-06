@@ -1,0 +1,29 @@
+.footer {
+    padding: 24px 20px 40px;
+    color: $greyscale03;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: $greyscale07;
+    margin-top: auto;
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-content {
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+
+.footer-policy {
+    font-weight: 600;
+}
+
+.border-right {
+    padding-right: 9px;
+    border-right: 1px solid $greyscale05;
+    margin-right: 9px;
+}

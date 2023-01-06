@@ -1,0 +1,86 @@
+
+.account {
+  position: relative;
+  text-align: -webkit-center;
+
+  .account-setting {
+    //positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+
+    //box-element
+    display: flex;
+    border: 1px solid $greyscale05;
+    padding: 4px 8px;
+    border-radius: 100px;
+    width: fit-content;
+
+    .account-setting-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .account-avatar {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    position: relative;
+    
+    .filetype {
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      left: 50%;
+      z-index: 100;
+      opacity: 0;
+      cursor: pointer;
+      transform: translateX(-50%);
+    }
+
+    .avatar {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .account-mbti {
+    color: $greyscale03;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+
+    .account-mbti-label {
+      color: $white;
+      background-color: $secondary;
+      font-size: 10px;
+      line-height: 10px;
+      
+      border-radius: 100px;
+      border: 1px solid $secondary;
+      padding: 4px 6px;
+      margin-right: 4px;     
+    }
+  }
+
+  .account-name {
+    display: flex;
+    justify-content: center;
+
+    .account-name-content {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: $greyscale01;
+      background-color: transparent;
+      text-align: center;
+      margin-right: 4px;
+      outline: none;
+    }
+
+    .account-name-edit {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Wenimal - Terms and Condition" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+  <title>Terms and Condition</title>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.0.279/legacy/build/pdf.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    body {
+      background: rgba(237, 237, 240, 1);
+      width: 100%;
+      height: 100%
+    }
+
+    .main-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .toolbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      cursor: default;
+      font: message-box;
+    }
+
+    .toolbar-container {
+      position: relative;
+      width: 100%
+      height: 32px;
+      background-color: rgba(249, 249, 250, 1);
+      box-shadow: 0 1px 0 rgba(204, 204, 204, 1);;
+      border-bottom: none;
+    }
+
+    .toolbar-viewer {
+      display: flex;
+      align-items: center;
+      height: 32px;
+    }
+
+    .toolbar-controls {
+      margin: 0 auto;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+      width: 40px;
+      text-align: right;
+      padding: 4px 7px;
+      margin: 3px 0;
+      border-radius: 2px;
+      background-color: white;
+      background-clip: padding-box;
+      border: 1px solid rgba(187, 187, 188, 1);
+      box-shadow: none;
+      color: rgba(6, 6, 6, 1);
+      font-size: 12px;
+      line-height: 16px;
+      outline: none;
+    }
+
+    #prev, #next {
+      min-width: 16px;
+      padding: 2px 6px 0;
+      border: none;
+      border-radius: 2px;
+      color: rgba(12, 12, 13, 1);
+      font-size: 12px;
+      line-height: 14px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      cursor: default;
+      box-sizing: border-box;
+      margin: 0;
+      background: none;
+      width: 28px;
+      height: 28px;
+      outline: none;
+      opacity: 0.7;
+    }
+
+    #prev {
+      margin-right: -4px;
+    }
+
+    #prev:hover, #next:hover,
+    #prev:focus-visible, #next:focus-visible {
+      background: rgba(221, 222, 223, 1)
+    }
+
+    .vert-line {
+      border-right: 1px solid #b5afaf;
+    }
+
+    .page-count {
+      font-size: 12px;
+    }
+
+    #prev.disabled,
+    #next.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .viewer-container {
+      visibility: hidden;
+      padding: 16px;
+      margin-top: 32px;
+    }
+
+    .canvas-container {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .canvas-container {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #the-canvas {
+      background: #ffffff;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+      direction: ltr;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="main-container">
+    <div class="toolbar">
+      <div class="toolbar-container">
+        <div class="toolbar-viewer">
+          <div class="toolbar-controls">
+            <button id="prev">
+              <svg fill="none" height="10" viewBox="0 0 16 10" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M15.1942 8.94875C14.9132 9.25305 14.4473 9.26292 14.1536 8.9708L7.76397 2.61487L1.88303 8.94906C1.6012 9.25261 1.13529 9.26126 0.842401 8.96836C0.549509 8.67547 0.540542 8.19195 0.822372 7.8884L6.84158 1.40528C6.8536 1.39233 6.86587 1.37979 6.87838 1.36765L7.04129 1.19124C7.416 0.785513 8.03717 0.772351 8.42873 1.16184L15.1713 7.86885C15.465 8.16097 15.4752 8.64446 15.1942 8.94875Z"
+                      fill="black"
+                      fill-rule="evenodd"/>
+              </svg>
+            </button>
+            <span class="vert-line">&nbsp;</span>
+            <button id="next">
+              <svg fill="none" height="10" viewBox="0 0 16 10" width="16" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M15.1942 1.05125C14.9132 0.746951 14.4473 0.737078 14.1536 1.0292L7.76397 7.38513L1.88303 1.05094C1.6012 0.747386 1.13529 0.738745 0.842401 1.03164C0.549509 1.32453 0.540542 1.80805 0.822372 2.1116L6.84158 8.59472C6.8536 8.60767 6.86587 8.62021 6.87838 8.63235L7.04129 8.80876C7.416 9.21449 8.03717 9.22765 8.42873 8.83816L15.1713 2.13115C15.465 1.83903 15.4752 1.35554 15.1942 1.05125Z"
+                      fill="black"
+                      fill-rule="evenodd"/>
+              </svg>
+            </button>
+            <input autocomplete="off" class="toolbar-field" id="current-page" min="1" title="Page" type="number"
+                   value="1">
+            <span class="page-count">of <span id="page-count"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="viewer-container">
+      <div id="pdf-viewer">
+        <div class="canvas-container">
+          <canvas id="the-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const url = 'https://wenimal-assets.s3.ap-northeast-2.amazonaws.com/01ea31bc-0d96-4628-a155-c7a543909b7b.pdf';
+
+    let pdfDoc = null,
+      pageNum = 1,
+      pageRendering = false,
+      pageNumPending = null,
+      canvas = document.getElementById('the-canvas'),
+      ctx = canvas.getContext('2d');
+
+    const prev = document.getElementById('prev'),
+      next = document.getElementById('next'),
+      currentPage = document.getElementById('current-page'),
+      pageCount = document.getElementById('page-count'),
+      viewerContainer = document.querySelector('.viewer-container');
+
+    /**
+     * Get page info from document, resize canvas accordingly, and render page.
+     * @param num Page number.
+     */
+    function renderPage(num) {
+      pageRendering = true;
+      // Using promise to fetch the page
+      pdfDoc.getPage(num).then(function (page) {
+        const dpr = window.devicePixelRatio || 1;
+        const bsr = ctx.webkitBackingStorePixelRatio ||
+          ctx.mozBackingStorePixelRatio ||
+          ctx.msBackingStorePixelRatio ||
+          ctx.oBackingStorePixelRatio ||
+          ctx.backingStorePixelRatio || 1;
+        const ratio = dpr / bsr;
+        const viewport = page.getViewport({scale: 1.5,});
+        canvas.width = viewport.width * ratio;
+        canvas.height = viewport.height * ratio;
+        canvas.style.width = viewport.width + 'px';
+        // canvas.style.height = viewport.height + 'px'
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+        // Render PDF page into canvas context
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        // Wait for rendering to finish
+        renderTask.promise.then(function () {
+          pageRendering = false;
+          viewerContainer.style.visibility = 'visible';
+          if (pageNumPending !== null) {
+            // New page rendering is pending
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      // Update page counters
+      currentPage.value = num;
+      if (num === 1) {
+        prev.classList.add('disabled');
+      } else {
+        prev.classList.remove('disabled');
+      }
+
+      if (num === pdfDoc.numPages) {
+        next.classList.add('disabled');
+      } else {
+        next.classList.remove('disabled');
+      }
+    }
+
+    /**
+     * If another page rendering in progress, waits until the rendering is
+     * finised. Otherwise, executes rendering immediately.
+     */
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    /**
+     * Displays previous page.
+     */
+    function onPrevPage() {
+      if (pageNum <= 1) {
+        return;
+      }
+      pageNum--;
+      queueRenderPage(pageNum);
+    }
+
+    prev.addEventListener('click', onPrevPage);
+
+    /**
+     * Displays next page.
+     */
+    function onNextPage() {
+      if (pageNum >= pdfDoc.numPages) {
+        return;
+      }
+      pageNum++;
+      queueRenderPage(pageNum);
+    }
+
+    next.addEventListener('click', onNextPage);
+
+    /**
+     * Jump to a specific page.
+     */
+    function jumpToPage(e) {
+      // Get key code
+      const code = (e.keyCode ? e.keyCode : e.which);
+
+      // If key code matches that of the Enter key
+      if (code === 13) {
+        const desiredPage = currentPage.valueAsNumber;
+
+        if (desiredPage < 1 || desiredPage > pdfDoc.numPages) {
+          return;
+        }
+        pageNum = desiredPage;
+        queueRenderPage(desiredPage);
+      }
+    }
+
+    currentPage.addEventListener('keypress', jumpToPage);
+
+    /**
+     * Asynchronously downloads PDF.
+     */
+    pdfjsLib.getDocument(url).promise.then(function (pdfDoc_) {
+      pdfDoc = pdfDoc_;
+      pageCount.textContent = pdfDoc.numPages;
+
+      // Initial/first page rendering
+      renderPage(pageNum);
+    });
+  </script>
+</body>
+</html>

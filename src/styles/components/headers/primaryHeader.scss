@@ -1,0 +1,22 @@
+.primary-header {
+  height: 56px;
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.primary-header-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+}
